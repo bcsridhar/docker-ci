@@ -7,6 +7,11 @@
 #    commands:
 #      - $DOCKER_HUB_TRIGGER
 
-test:
-  override:    
+#test:
+#  override:    
+#    - mocha
+
+version: 2
+jobs:
+  build:
     - mocha
