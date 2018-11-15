@@ -15,4 +15,4 @@ version: 2
 jobs:
   build:
     steps:
-      - mocha
+      - run: yarn test
