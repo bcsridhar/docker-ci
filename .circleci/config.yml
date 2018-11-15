@@ -39,7 +39,7 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
-      # run tests!
-      #- run: mocha test
 
+      - deploy:
+          name: Publish application
+          command: $DOCKER_HUB_TRIGGER
