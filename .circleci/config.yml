@@ -36,10 +36,11 @@ jobs:
           - v1-dependencies-
 
       - run: npm install
-      - run: npm install mocha
+      - run: npm install -g mocha
+      - run: npm install -g mocha-junit-reporter
       - run: mkdir ~/junit
       - run:
-          command: node_modules/.bin/mocha test --reporter mocha-junit-reporter
+          command: mocha test --reporter mocha-junit-reporter
           environment:
             MOCHA_FILE: ~/junit/test-results.xml
           when: always
