@@ -15,4 +15,5 @@ version: 2
 jobs:
   build:
     steps:
-      - run: mocha test
+      override
+        - mocha
